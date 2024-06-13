@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: rich-menu
+Version: 0.1.5
+Summary: 
+Author: gbPagano
+Author-email: guilhermebpagano@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: click (>=8.1.3,<9.0.0)
+Requires-Dist: rich (>=13.7.0,<14.0.0)
+Project-URL: Code, https://github.com/gbPagano/rich_menu
+Description-Content-Type: text/markdown
+
+# Rich Menu
+
+Rich menu is a library that allows the quick and simple creation of cli menus, using [Rich](https://github.com/Textualize/rich) as a backend.
+
+
+## Installation
+
+Installation is very simple, just run the following command in the terminal:
+
+```bash
+pip install rich-menu
+```
+
+
+## Basic Usage
+
+```python
+from rich_menu import Menu
+
+menu = Menu(
+    "Option 1",
+    "Option 2",
+    "Option 3",
+    "Exit",
+)
+match menu.ask():
+    case "Option 1":
+        print("first option selected")
+    case "Option 2":
+        print("second option selected")
+    case "Option 3":
+        print("third option selected")
+    case "Exit":
+        exit()
+
+```
+
+```python
+from rich_menu import Menu
+
+menu = Menu(
+    "X",
+    "O",
+    color="blue",
+    rule_title="Tic Tac Toe",
+    align="center",
+    panel_title="Choose your icon",
+    selection_char="->",
+)
+selected = menu.ask(screen=False)
+```
+
+
+
+
+
