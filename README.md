@@ -16,8 +16,10 @@
 O jogo não precisa de interações com o usuário após a declaração do estado inicial. Ele é interessante para analisar como um estado pode evoluir para um mais complexo, dado regras simples. Para conhecer mais sobre a criação desse tipo de algoritmo, recomendo ler a página do Wikipedia (https://pt.wikipedia.org/wiki/Jogo_da_vida). Lá consta diversas curiosidades sobre a criação e como você pode encontrar aplicações diferentes (até na música!) do jogo da vida. 
 
 ### Sobre o código
-Um menu é exibido no terminal para escolher a quantidade de gerações pode ser definida no início do programa e o tamanho da matriz (nxn).
+A configuração inicial do estado da população é feita por inputs no terminal. O resultado é mostrado no terminal, mas é possível também salvar as gerações em um arquivo .csv, para algum estudo estatístico futuro.
 
+### Contribuições
+Quer contribuir com uma nova feature? Perfeito. Quer sugerir/colaborar em algo? Me envie um e-mail para me15degrees@poggers.team, ou abra uma issue.
 
 ## Game of Life
 ### What is it?
@@ -37,4 +39,7 @@ It is the most well-known example of a cellular automaton and was created by Joh
 The game does not need interactions with the user after declaring the initial state. It is interesting for analyzing how a state can evolve into a more complex one, given simple rules. To learn more about the creation of this type of algorithm, I recommend reading the Wikipedia page (https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). There you will find various curiosities about its creation and how you can find different applications (even in music!) of the game of life.
 
 ### About the code
-A menu is displayed in the terminal to choose the number of generations that can be defined at the beginning of the program and the size of the matrix (nxn).
+The initial configuration of the population state is done through inputs in the terminal. The result is displayed in the terminal, but it's also possible to save the generations in a .csv file for future statistical studies.
+
+### Contributions
+Want to contribute a new feature? Perfect. Want to suggest/collaborate on something? Send me an email at me15degrees@poggers.team, or open an issue.
