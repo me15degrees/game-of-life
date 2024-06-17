@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "game-of-life"
+version = "0.1.0"
+description = ""
+authors = ["me15degrees <me15degrees@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+isort = "^5.13.2"
+pytest-cov = "^5.0.0"
+blue = "^0.9.1"
+taskipy = "^1.13.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
