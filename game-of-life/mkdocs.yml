@@ -1,0 +1,14 @@
+site_name: Jogo da Vida
+repo_url: https://github.com/me15degrees/game-of-life
+repo_name: me15degrees/game-of-life
+edit_uri: tree/main/docs
+
+theme: 
+  name: material
+  language: pt-BR
+  logo: assets/vita.svg
+  favicon: assets/vita.svg
+markdown_extensions:
+  - attr_list
+extra_css:
+- stylesheets/extra.css
