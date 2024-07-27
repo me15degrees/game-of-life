@@ -1,4 +1,11 @@
 ## Jogo da vida
+<div align="center">
+  
+[![Em Progresso](https://img.shields.io/badge/Status-Em%20Progresso-yellow.svg)](https://github.com/me15degreesm/interface-calculadora-rendimento)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+  
+</div>
+
 ### O que é?
 É uma simulação que segue regras bem definidas de como um grupo de seres vivos deve se orientar. O jogo foi criado de modo a reproduzir, através de regras simples, as alterações e mudanças em grupos de seres vivos, tendo aplicações em diversas áreas da ciência. É definido um tabuleiro bidimensional (nesse código será considerada uma matriz quadrada para facilitar a representação computacional) com valores binários para definir se o elemento da matriz - que representa uma célula, por exemplo - está viva, ou morta.
 
