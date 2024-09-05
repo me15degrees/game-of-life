@@ -2,6 +2,8 @@ import os
 import shutil 
 import time
 import csv
+from rich.table import Table
+from rich import print
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -100,11 +102,12 @@ def change(i, j, matrix, neighbour): # para alterar o estado da célula baseada 
     return item
 
 def step(q,n,matrix):
+    table = Table()
     print(f"---------------- RESULT AFTER {q+1} GENERATIONS ----------------")
     for i in range(n):
         for j in range(n):
-            print(matrix[i][j], end=" ")
-        print()
+            table.add_column(matrix[i][j])
+        print(table)
 
 def save(matrix): # para escrever as matrizes no arquivo .csv
     filename = "game_of_life.csv"
@@ -114,41 +117,3 @@ def save(matrix): # para escrever as matrizes no arquivo .csv
             writer_csv.writerow(line)
         writer_csv.writerow([])  
     
-def main():
-    size, gen, steps, archive = write()
-    
-    matrix = []
-
-    for _ in range(size): # para criar a matriz
-        matrix.append(list(map(int, input().split())))
-    
-    for time in range(gen):
-        new_matrix = [row[:] for row in matrix]
-        for i in range(size):
-            for j in range(size):
-                neighbour = [
-                    upper(i, j, matrix),
-                    down(i, j, matrix, size),
-                    left(i, j, matrix),
-                    right(i, j, matrix, size),
-                    diag1(i, j, matrix),
-                    diag2(i, j, matrix, size),
-                    diag3(i, j, matrix, size),
-                    diag4(i, j, matrix, size)
-                ]
-                neighbour = [x for x in neighbour if x is not None] # pode retornar none quando não é possível retornar um vizinho
-                new_matrix[i][j] = change(i, j, matrix, neighbour)
-        matrix = new_matrix
-            
-        if steps == "Y":
-            step(time, size, matrix)
-            if archive == "Y": # se é pra salvar em toda repetição, tem que estar depois do primeiro if
-                save(matrix)
-                
-    if steps == "N":
-        step(time, size, matrix)
-    if archive == "Y": # não é condicionada ao step
-        save(matrix)
-
-if __name__ == "__main__":
-    main()
