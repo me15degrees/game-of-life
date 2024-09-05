@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ## Jogo da vida
 <div align="center">
   
