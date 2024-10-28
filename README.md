@@ -50,4 +50,3 @@ The initial configuration of the population state is done through inputs in the 
 
 ### Contributions
 Want to contribute a new feature? Perfect. Want to suggest/collaborate on something? Send me an email at me15degrees@poggers.team, or open an issue.
->>>>>>> d7a5307efc16cd5cae39be68d76ba7075aec51af
